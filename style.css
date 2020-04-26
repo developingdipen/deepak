@@ -77,7 +77,7 @@ body {
 /* Nav-bar Ends*/
   .nav-bar {
     display: flex;
-    background-image: linear-gradient(260deg,  black 0% 15%, goldenrod 15% 85%, black 85% 100%);
+    background-image: linear-gradient(135deg,  black 0% 15%, goldenrod 15% 85%, black 85% 100%);
     height: 3em;
     align-items: center;
     justify-content: center;
@@ -104,6 +104,19 @@ body {
 
 /* Nav-bar Ends*/
 
+
+.content {
+  background-color:black;
+  color:  goldenrod;
+  text-align: center;
+}
+
+
+.about{
+  margin: 15% 0% 15% 0%;
+}
+
+
 /* Photo Grid Starts*/
 
   .row {
@@ -111,7 +124,7 @@ body {
     display: flex;
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
-    padding: 5% 20%;
+    padding: 1% 20%;
   }
   
   /* Create four equal columns that sits next to each other */
@@ -126,9 +139,16 @@ body {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
-    border: 1px solid gold;
-       
+    border: 1px solid gold;    
   }
+
+  img:hover{
+    transform: scale(1.05);
+   
+  }
+
+
+
   /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .column {
@@ -149,14 +169,89 @@ body {
   
   /* Photo Grid Ends*/
 
+/* Contact Starts*/
 
-  .content {
-      background-color:black;
-      color:  goldenrod;
-      text-align: center;
+  .social-bar{
+    display: flex;
+    background-image: linear-gradient(135deg,  black 0% 15%, goldenrod 15% 85%, black 85% 100%);
+    height: 3em;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;   
   }
 
 
+  .social-links {
+    padding:0;
+    list-style: none;
+    text-align: center;
+    font-size: 1.5em;
+    display: flex;
+  }
+    
+  .social-buttons a {
+    text-decoration: none;
+    color: black !important;
+    
+  }
+  
+  .fa-linkedin {
+      padding:10px 14px;
+      -o-transition:.5s;
+      -ms-transition:.5s;
+      -moz-transition:.5s;
+      -webkit-transition:.5s;
+      transition: .5s;
+  }
+  .fa-linkedin:hover {
+      background-color: #0073a4;
+      color:white;
+  }
+  
+  .fa-google {
+      padding:10px 14px;
+      -o-transition:.5s;
+      -ms-transition:.5s;
+      -moz-transition:.5s;
+      -webkit-transition:.5s;
+      transition: .5s;
+      
+  }
+  .fa-google:hover {
+      background-color: #e64a41;
+      color:white;
+  }
+  
+  .fa-codepen {
+      padding:10px 14px;
+      -o-transition:.5s;
+      -ms-transition:.5s;
+      -moz-transition:.5s;
+      -webkit-transition:.5s;
+      transition: .5s;
+  }
+
+  .fa-codepen:hover {
+      background-color: #eb8231;
+      color:white;
+  }
+  
+  .fa-github {
+    
+      padding:10px 14px;
+      -o-transition:.5s;
+      -ms-transition:.5s;
+      -moz-transition:.5s;
+      -webkit-transition:.5s;
+      transition: .5s;
+      
+  }
+  .fa-github:hover {
+      background-color: #5a32a3;
+     color:white;
+  }
+
+/* Contact Ends*/
 
   /* Footer Starts*/
 
@@ -164,16 +259,62 @@ body {
     text-align: center;
     color: goldenrod;
     background-color: black;
+    padding-top: 1em;
+    padding-bottom: .07em;
   }
 
   .footer p {
-      padding-top: em;
+      line-height: .5%;
   }
 
   .footer p a {
       text-decoration: none;
       color: goldenrod;
+      font-style: italic;
   }
-
+  
 
   /* Footer Ends*/
+
+ 
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+   
+    min-width: 1em;
+  
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: gold;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    color: white;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
