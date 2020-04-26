@@ -6,6 +6,6 @@ $(document).ready(function() {
     })
 
 
-    function myFunction() {
+    function myScroll() {
         document.getElementById("nav").scrollIntoView()
     }
