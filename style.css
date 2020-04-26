@@ -1,0 +1,179 @@
+body { margin: 0;} 
+body * {box-sizing: border-box;}
+
+html, body {
+ height:100%;
+ width: 100%;
+ padding:0;
+ margin:0;
+ scroll-behavior: smooth;
+}
+body {
+    background-color:  black;
+}
+
+/* Header Starts*/
+
+ .heroimage {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://images-na.ssl-images-amazon.com/images/I/41CQHbWDzJL._AC_SX679_.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+.herotext {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: goldenrod;
+}
+.herotext h1{
+    font-size: 4em;
+    font-weight: 400;
+}
+.herotext h2{
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.button {
+    width: 75px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5%;
+  }
+  
+  .button-2 {
+    color: goldenrod;
+    border: none;
+    background-image: -webkit-linear-gradient(30deg, black 50%, transparent 50%);
+    background-image: linear-gradient(30deg, black 50%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+  }
+  .button-2:hover {
+    background-position: 100%;
+    color:black;
+    background-color: goldenrod;
+  }
+
+/* Header Ends*/
+
+/* Nav-bar Ends*/
+  .nav-bar {
+    display: flex;
+    background-image: linear-gradient(260deg,  black 0% 15%, goldenrod 15% 85%, black 85% 100%);
+    height: 3em;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links {
+  text-decoration: none;
+  display: flex;
+}
+
+.nav-links :hover{
+  color: white;
+}
+
+.nav-links li {
+    list-style-type: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
+  padding-right: 1em;
+}
+
+/* Nav-bar Ends*/
+
+/* Photo Grid Starts*/
+
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 5% 20%;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    border: 1px solid gold;
+       
+  }
+  /* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  /* Photo Grid Ends*/
+
+
+  .content {
+      background-color:black;
+      color:  goldenrod;
+      text-align: center;
+  }
+
+
+
+  /* Footer Starts*/
+
+  .footer {
+    text-align: center;
+    color: goldenrod;
+    background-color: black;
+  }
+
+  .footer p {
+      padding-top: em;
+  }
+
+  .footer p a {
+      text-decoration: none;
+      color: goldenrod;
+  }
+
+
+  /* Footer Ends*/
