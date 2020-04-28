@@ -121,9 +121,7 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
- 
   min-width: 1em;
-
   z-index: 1;
 }
 
@@ -154,13 +152,55 @@ body {
   text-align: center;
 }
 
-
+/* About Section Starts*/
 .about{
   margin: 15% 0% 15% 0%;
 }
 
+.about-row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 1% 20%;
+}
 
-/* Photo Grid Starts*/
+/* Create four equal columns that sits next to each other */
+.about-column {
+  -ms-flex: 33%; /* IE10 */
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+
+    .about-column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+    .about-row{
+      padding: 1% 10%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+
+   .about-row{
+      padding: 1% 5%;
+    }
+  }
+/* About Section Ends*/
+
+
+  .work{
+    margin-top: 10vh;
+  }
+
+/* Home Page Photo Layout Starts */
 
   .row {
     display: -ms-flexbox; /* IE10 */
@@ -194,25 +234,97 @@ body {
 
   /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
+
     .column {
       -ms-flex: 50%;
       flex: 50%;
       max-width: 50%;
     }
+    .row{
+      padding: 1% 10%;
+    }
   }
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
+
     .column {
       -ms-flex: 100%;
       flex: 100%;
       max-width: 100%;
     }
+    .row{
+      padding: 1% 5%;
+    }
   }
   
-  /* Photo Grid Ends*/
+/* Home Page Photo Layout Ends */
+
+
+/* Genre Photo Pages Start*/ 
+
+ .genre-row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 1% 20%;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .genre-column {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+  }
+  
+  .genre-column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    border: 1px solid gold;    
+  }
+
+  img:hover{
+    transform: scale(1.05);
+   
+  }
+
+
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+
+    .genre-row{
+      padding: 1% 10%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+
+    .genre-column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+    .genre-row{
+      padding: 1% 5%;
+    }
+  }
+  
+/* Genre Photo Pages End*/ 
+
+
 
 /* Contact Starts*/
+
+  .contact h1{
+    color: goldenrod;
+    text-align: center;
+    margin: 15% 0% 15% 0%;
+  }
 
   .social-bar{
     display: flex;
@@ -318,6 +430,9 @@ body {
       font-style: italic;
   }
   
+  .footer p a:hover{
+    color: white;
+  }
 
   /* Footer Ends*/
 
