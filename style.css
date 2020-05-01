@@ -155,26 +155,149 @@ body {
 
 /* About Section Starts*/
 .about{
-  margin: 15% 0% 15% 0%;
+  margin: 10% 0% 10% 0%;
 }
 
-.about-row {
-  display: -ms-flexbox; /* IE10 */
+/* Aperture Animation Starts*/
+
+.hello{
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
+  align-items: center;
+  justify-content: center;
+}
+
+  .aperture {
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10vh;
+    background: rgb(34, 34, 34);
+    border-radius: 50%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    /*prevents translate overflowing*/
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+    -webkit-transition: background 1s ease-out;
+    transition: background 1s ease-out;
+    -webkit-transition-delay: .5s;
+            transition-delay: .5s;
+  }
+  
+  .aperture:hover {
+    background: goldenrod;
+  }
+  
+  .aperture-blade {
+    -webkit-transform-origin: 150px 150px;
+            transform-origin: 150px 150px;
+  }
+  
+  .aperture-blade:nth-child(1) {
+    -webkit-transform: rotate(36deg);
+            transform: rotate(36deg);
+  }
+  
+  .aperture-blade:nth-child(2) {
+    -webkit-transform: rotate(72deg);
+            transform: rotate(72deg);
+  }
+  
+  .aperture-blade:nth-child(3) {
+    -webkit-transform: rotate(108deg);
+            transform: rotate(108deg);
+  }
+  
+  .aperture-blade:nth-child(4) {
+    -webkit-transform: rotate(144deg);
+            transform: rotate(144deg);
+  }
+  
+  .aperture-blade:nth-child(5) {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  
+  .aperture-blade:nth-child(6) {
+    -webkit-transform: rotate(216deg);
+            transform: rotate(216deg);
+  }
+  
+  .aperture-blade:nth-child(7) {
+    -webkit-transform: rotate(252deg);
+            transform: rotate(252deg);
+  }
+  
+  .aperture-blade:nth-child(8) {
+    -webkit-transform: rotate(288deg);
+            transform: rotate(288deg);
+  }
+  
+  .aperture-blade:nth-child(9) {
+    -webkit-transform: rotate(324deg);
+            transform: rotate(324deg);
+  }
+  
+  .aperture-blade:before {
+    display: table;
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 17px;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 160px solid black;
+    -webkit-transform: rotate(90deg) translate(-20px, 0);
+            transform: rotate(90deg) translate(-20px, 0);
+    -webkit-transition: -webkit-transform .4s ease-out;
+    transition: -webkit-transform .4s ease-out;
+    transition: transform .4s ease-out;
+    transition: transform .4s ease-out, -webkit-transform .4s ease-out;
+  }
+  
+  .aperture:hover .aperture-blade:before {
+    -webkit-transform: rotate(90deg) translate(110px, 0px);
+            transform: rotate(90deg) translate(110px, 0px);
+  }
+  
+  .icon {
+    opacity: 0;
+    -webkit-transition: opacity .4s linear;
+    transition: opacity .4s linear;
+  }
+  .aperture:hover .icon {
+    opacity: 1;
+  }
+
+  .icon img {
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 9%;
+    width: 82%;
+  }
+
+  /* Aperture Animation Ends*/
+
+.about-row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
   flex-wrap: wrap;
   padding: 1% 20%;
 }
 
-/* Create four equal columns that sits next to each other */
 .about-column {
-  -ms-flex: 33%; /* IE10 */
+  -ms-flex: 33%; 
   flex: 33%;
   max-width: 33%;
   padding: 0 4px;
 }
 
-  /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
 
     .about-column {
@@ -187,7 +310,6 @@ body {
     }
   }
   
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
 
    .about-row{
@@ -204,16 +326,16 @@ body {
 /* Home Page Photo Layout Starts */
 
   .row {
-    display: -ms-flexbox; /* IE10 */
+    display: -ms-flexbox; 
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
+    -ms-flex-wrap: wrap; 
     flex-wrap: wrap;
     padding: 1% 20%;
   }
   
-  /* Create four equal columns that sits next to each other */
+  
   .column {
-    -ms-flex: 25%; /* IE10 */
+    -ms-flex: 25%; 
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
@@ -227,13 +349,11 @@ body {
   }
 
   img:hover{
-    transform: scale(1.05);
+    transform: scale(2.05);
    
   }
 
 
-
-  /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
 
     .column {
@@ -246,7 +366,6 @@ body {
     }
   }
   
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
 
     .column {
@@ -265,16 +384,15 @@ body {
 /* Genre Photo Pages Start*/ 
 
  .genre-row {
-    display: -ms-flexbox; /* IE10 */
+    display: -ms-flexbox; 
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
+    -ms-flex-wrap: wrap; 
     flex-wrap: wrap;
     padding: 1% 20%;
   }
   
-  /* Create four equal columns that sits next to each other */
   .genre-column {
-    -ms-flex: 50%; /* IE10 */
+    -ms-flex: 50%; 
     flex: 50%;
     max-width: 50%;
     padding: 0 4px;
@@ -292,9 +410,6 @@ body {
    
   }
 
-
-
-  /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
 
     .genre-row{
@@ -302,7 +417,6 @@ body {
     }
   }
   
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
 
     .genre-column {
@@ -437,6 +551,6 @@ body {
 
   /* Footer Ends*/
 
- 
 
- 
+  
+  
