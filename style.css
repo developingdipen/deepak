@@ -103,6 +103,9 @@ body {
   font-size: 1.5em;
   padding-right: 1em;
 }
+.nav-links .dropdown ul{
+  padding: 0;
+}
 
 .dropdown {
   float: left;
