@@ -253,10 +253,10 @@ body {
     border-bottom: 160px solid black;
     -webkit-transform: rotate(90deg) translate(-20px, 0);
             transform: rotate(90deg) translate(-20px, 0);
-    -webkit-transition: -webkit-transform .4s ease-out;
-    transition: -webkit-transform .4s ease-out;
-    transition: transform .4s ease-out;
-    transition: transform .4s ease-out, -webkit-transform .4s ease-out;
+    -webkit-transition: -webkit-transform .5s ease-out;
+    transition: -webkit-transform .5s ease-out;
+    transition: transform .5s ease-out;
+    transition: transform .5s ease-out, -webkit-transform .5s ease-out;
   }
   
   .aperture:hover .aperture-blade:before {
@@ -266,8 +266,8 @@ body {
   
   .icon {
     opacity: 0;
-    -webkit-transition: opacity .4s linear;
-    transition: opacity .4s linear;
+    -webkit-transition: opacity .5s linear;
+    transition: opacity .5s linear;
   }
   .aperture:hover .icon {
     opacity: 1;
@@ -382,6 +382,9 @@ body {
 
 
 /* Genre Photo Pages Start*/ 
+  .content{
+    overflow-x: hidden;
+  }
 
  .genre-row {
     display: -ms-flexbox; 
@@ -541,7 +544,7 @@ body {
 
   .footer p a {
       text-decoration: none;
-      color: goldenrod;
+      color: rgb(217, 165, 32);
       font-style: italic;
   }
   
@@ -551,6 +554,4 @@ body {
 
   /* Footer Ends*/
 
-
-  
   
